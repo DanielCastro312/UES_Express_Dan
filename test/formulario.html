@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de UES Express</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Solicitud de UES Express</h1>
+        <form id="dataForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="cliente">Cliente:</label>
+                    <input type="text" id="cliente" name="cliente" value="Getnet | NAD" required>
+                </div>
+                <div class="form-group">
+                    <label for="sucursal">Sucursal:</label>
+                    <input type="text" id="sucursal" name="sucursal" value="Bs As 579" required>
+                </div>
+                <div class="form-group">
+                    <label for="sector">Sector que solicita:</label>
+                    <input type="text" id="sector" name="sector" value="Soporte Operativo" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="dir_origen">Dirección de Origen:</label>
+                    <input type="text" id="dir_origen" name="dir_origen" value="Bs As 579 " required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre_contacto">Nombre contacto:</label>
+                    <input type="text" id="nombre_contacto" name="nombre_contacto" value="" required>
+                </div>
+                <div class="form-group">
+                    <label for="tel_contacto">Tel contacto:</label>
+                    <input type="text" id="tel_contacto" name="tel_contacto" value="29170075" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fecha_retiro">Fecha de retiro:</label>
+                    <input type="date" id="fecha_retiro" name="fecha_retiro" value="" required>
+                </div>
+                <div class="form-group">
+                    <label for="horario_retiro">Horario de retiro:</label>
+                    <input type="text" id="horario_retiro" name="horario_retiro" value="Horario que puedan" required>
+                </div>
+                <div class="form-group">
+                    <label for="plazo">Plazo (Express, en el dia, 24hs, 48hs):</label>
+                    <input type="text" id="plazo" name="plazo" value="Express" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="tipo_producto">Tipo de producto a retirar:</label>
+                    <input type="text" id="tipo_producto" name="tipo_producto" value="Paquete" required>
+                </div>
+                <div class="form-group">
+                    <label for="vehiculo">Vehículo:</label>
+                    <input type="text" id="vehiculo" name="vehiculo" value="Moto" required>
+                </div>
+                <div class="form-group">
+                    <label for="dir_entrega">Dirección de entrega:</label>
+                    <input type="text" id="dir_entrega" name="dir_entrega" value="" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre_contacto_entrega">Nombre contacto (entrega):</label>
+                    <input type="text" id="nombre_contacto_entrega" name="nombre_contacto_entrega" value="" required>
+                </div>
+                <div class="form-group">
+                    <label for="tel_contacto_entrega">Tel contacto (entrega):</label>
+                    <input type="text" id="tel_contacto_entrega" name="tel_contacto_entrega" value="" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_entrega">Fecha de entrega:</label>
+                    <input type="date" id="fecha_entrega" name="fecha_entrega" value="" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="horario_entrega">Horario de entrega:</label>
+                    <input type="text" id="horario_entrega" name="horario_entrega" value="El que puedan" required>
+                </div>
+                <div class="form-group">
+                    <label for="observaciones">Observaciones adicionales:</label>
+                    <input type="text" id="observaciones" name="observaciones" value="Ticket: ">
+                </div>
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.6/xlsx.full.min.js"></script>
+    <script src="fechas.js"></script>
+    <script src="mail_excel.js"></script>
+</body>
+</html>
