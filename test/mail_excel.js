@@ -65,7 +65,7 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
     // Crear enlace mailto
     const observaciones1 = formData.get('observaciones'); // Obtenido previamente
     const email1 = "logistica@upostal.com.uy";
-    const ccEmails = "soporte@nad.uy;expedicion@nad.uy";
+    const ccEmails = "expedicion@nad.uy";
     const subject = `Solicitud Express ${observaciones1}`;
     const body = `Buenos días, Estimados, espero se encuentren bien.\n\nLes realizamos una solicitud Express. Adjunto la planilla.\n\nGracias.`;
     const mailtoLink = document.createElement('a');
